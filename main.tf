@@ -15,7 +15,7 @@ provider "aws" {
 resource "aws_instance" "one" {
   count                  = 4
   ami                    = "ami-0ecb62995f68bb549"   # ensure this AMI exists in us-east-1
-  instance_type          = "t3.medium"
+  instance_type          = "t3.micro"
   key_name               = "taeeb"                  # must exist in the selected region/account
   vpc_security_group_ids = ["sg-0f6f1b21e855fa2a1"] # must exist in the selected VPC/region
   tags = {
